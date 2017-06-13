@@ -3,7 +3,7 @@ from .models import Notice, NoticeFile
 
 # Register your models here.
 
-class FilesInline(admin.TabularInline):
+class FilesInline(admin.StackedInline):
 	model = NoticeFile
 
 class NoticeAdmin(admin.ModelAdmin):

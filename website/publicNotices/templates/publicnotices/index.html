@@ -1,0 +1,11 @@
+{% if latest_notices_list %}
+	<ul>
+		{% for notice in latest_notices_list %}
+			<li>
+				<a href="{% url 'publicnotices:detail' notice.id %}"> {{ notice.title_text }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No public notices are available at this time.</p>
+{% endif %}
